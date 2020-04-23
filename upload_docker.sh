@@ -17,5 +17,4 @@ docker tag capstone:latest ${DOCPATH}
 
 # Step 3:
 # Push image to a docker repository
-aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 818176152437.dkr.ecr.us-east-1.amazonaws.com/capstone
 docker push ${DOCPATH}
