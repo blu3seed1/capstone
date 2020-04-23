@@ -15,6 +15,7 @@ docker build -t capstone .
 # Authenticate & tag
 docker tag capstone:latest ${DOCPATH}
 
-# Step 3:
+# Step 4:
 # Push image to a docker repository
+aws ecr get-login --no-include-email --region us-east-1 | awk '{print $6}' | docker login -u AWS --password-stdin 818176152437.dkr.ecr.us-east-1.amazonaws.com/capstone
 docker push ${DOCPATH}
