@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''./run_docker.sh
-'''
+        sh './upload_docker.sh'
       }
     }
 
