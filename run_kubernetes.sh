@@ -4,11 +4,11 @@
 
 # Step 1:
 # This is your Docker ID/path
-DOCPATH="bpyne/project-ml-microservice-kubernetes:app"
+DOCPATH="818176152437.dkr.ecr.us-east-1.amazonaws.com/capstone"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run udacity --image=${DOCPATH}
+kubectl run capstone --image=${DOCPATH}
 # Step 3:
 # List kubernetes pods
 kubectl get pods
