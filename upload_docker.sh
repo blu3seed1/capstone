@@ -5,11 +5,15 @@
 
 # Step 1:
 # Create dockerpath
-DOCPATH="bpyne/project-ml-microservice-kubernetes:app"
+DOCPATH="818176152437.dkr.ecr.us-east-1.amazonaws.com/capstone:latest"
 
-# Step 2:  
+# Step 2:
+# build container
+docker build -t capstone .
+
+# Step 3:
 # Authenticate & tag
-echo "Docker ID and Image: ${DOCPATH}"
+docker tag capstone:latest ${DOCPATH}
 
 # Step 3:
 # Push image to a docker repository
