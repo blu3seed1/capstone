@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Lint') {
       steps {
-        sh 'make all'
+        sh 'docker run --rm -i hadolint/hadolint < Dockerfile'
       }
     }
 
