@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Lint') {
       steps {
-        sh 'make'
+        sh 'make all'
       }
     }
 
