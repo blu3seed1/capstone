@@ -9,6 +9,13 @@ pipeline {
 
     stage('Build') {
       steps {
+        sh '''# build container
+docker build -t capstone .'''
+      }
+    }
+
+    stage('Push ') {
+      steps {
         sh './upload_docker.sh'
       }
     }
